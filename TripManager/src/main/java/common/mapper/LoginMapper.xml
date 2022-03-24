@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="common.mapper.LoginMapper">
+ 	<select id = "loginid" resultType = "User" parameterType="string">
+ 		select u_id, u_pwd from users where u_id=#{value}
+ 	</select>
+ 	
+ 	<!-- <select id = "loginpw" resultType = "User">
+ 		select u_pwd from users where u_id=#{value}
+ 	</select>	
+ 	<select id = "login" resultType = "User">
+ 		select u_pwd from users where u_id=#{id} and u_pwd=#{pw}
+ 	</select> -->
+ 
+ </mapper>
